@@ -5,6 +5,7 @@ VERSION=3.2.0
 # Installation
 apt-get update
 apt-get upgrade
+apt-get install -y wget unzip
 apt-get install -y build-essential cmake pkg-config
 apt-get install -y libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev
 apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
