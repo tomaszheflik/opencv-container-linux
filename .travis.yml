@@ -14,8 +14,8 @@ install:
 script:
   - docker images | grep -q opencv-container-linux
 
-#after_success:
-#  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-#      docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-#      docker push geflik/opencv-container-linux;
-#  fi
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+      docker push heflik/opencv-container-linux;
+  fi
