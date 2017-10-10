@@ -1,0 +1,19 @@
+sudo: true
+language: python
+
+python:
+  - 2.7
+  - 3.2
+
+servicxes:
+  - docker
+
+install:
+  - docker build -t heflik/opencv-container-linux .
+
+script:
+ - docker images | grep -q opencv-container-linux
+
+after_success:
+ - docker rmi -f heflik/opencv-container-linux
+
