@@ -3,15 +3,15 @@ HOME_DIR=/
 VERSION=3.2.0
 
 # Installation
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install -y build-essential cmake pkg-config
-sudo apt-get install -y libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev
-sudo apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-sudo apt-get install -y libxvidcore-dev libx264-dev
-sudo apt-get install -y libgtk-3-dev
-sudo apt-get install -y libatlas-base-dev gfortran
-sudo apt-get install -y python2.7-dev
+apt-get update
+apt-get upgrade
+apt-get install -y build-essential cmake pkg-config
+apt-get install -y libjpeg8-dev libtiff5-dev libjasper-dev libpng12-dev
+apt-get install -y libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+apt-get install -y libxvidcore-dev libx264-dev
+apt-get install -y libgtk-3-dev
+apt-get install -y libatlas-base-dev gfortran
+apt-get install -y python2.7-dev
 
 cd ${HOME_DIR}
 wget -O opencv.zip https://github.com/Itseez/opencv/archive/${VERSION}.zip
@@ -35,7 +35,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 
 make -j4
 make install
-sudo ldconfig
+ldconfig
 
 cd ${HOME_DIR}
 rm -rf opencv-${VERSION} opencv_contrib-${VERSION} opencv.zip opencv_contrib.zip
