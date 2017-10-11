@@ -3,6 +3,6 @@ FROM fedora
 #RUN apt-get -y install opencv2 && rm -f /var/cache/apt/archives/*.deb
 #RUN pip install opencv-python tornado
 RUN yum -y install numpy opencv*
-RUN yum clean all && yum clean headers
+RUN yum clean all 
 RUN mkdir /data
 VOLUME /data
