@@ -40,3 +40,5 @@ ldconfig
 
 cd ${HOME_DIR}
 rm -rf opencv-${VERSION} opencv_contrib-${VERSION} opencv.zip opencv_contrib.zip
+ rm -f /var/cache/apt/archives/*.deb
+ rm -rf /var/lib/apt/lists/*
